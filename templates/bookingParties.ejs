@@ -1,0 +1,28 @@
+<div class="booking-parties-container">
+    <h2 class="section-title">BOOKING PARTIES</h2>
+    <div class="items-container">
+        <% bookingParties.forEach(function(party) { %>
+            <h3 class="section-sub-title"><%= party.role %></h3>
+            <div class="desc-container">
+                <div class="desc-item">
+                    <div class="desc-title item-font">
+                        <span>Company Name</span>
+                    </div>
+                    <div class="item-font">:</div>
+                    <div class="desc-content item-font">
+                        <%= party.companyName %>
+                    </div>
+                </div>
+                <div class="desc-item">
+                    <div class="desc-title item-font">
+                        <span>Address</span>
+                    </div>
+                    <div class="item-font">:</div>
+                    <div class="desc-content item-font">
+                        <%= party.address %>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Booking Parties</title>
+    <style>
+        .booking-parties-container {
+            display: flex;
+            flex-direction: column;
+            width: 752px;
+            gap: 4px;
+
+            .section-title {
+                background-color: #E9EBEC;
+                border-bottom: solid 2px #333333;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 18px;
+                padding: 4px;
+            }
+
+            .section-sub-title {
+                font-size: 13px;
+                line-height: 15px;
+                font-weight: 700;
+                border-bottom: solid 2px #333333;
+                padding: 2px;
+            }
+
+            .desc-container {
+                display: flex;
+                gap: 12px;
+            }
+
+            .desc-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .desc-title {
+                display: flex;
+                font-weight: 700;
+                width: 108px;
+            }
+
+            .desc-content {
+                width: 238px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .item-font {
+                font-size: 13px;
+                line-height: 14px;
+                letter-spacing: -0.3px;
+            }
+
+            .items-container {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            h3, h2 {
+                margin: 0;
+            }
+        }
+
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="booking-parties-container">
+    <h2 class="section-title">BOOKING PARTIES</h2>
+    <div class="items-container">
+        <% bookingParties.forEach(function(party) { %>
+            <h3 class="section-sub-title"><%= party.role %></h3>
+            <div class="desc-container">
+                <div class="desc-item">
+                    <div class="desc-title item-font">
+                        <span>Company Name</span>
+                    </div>
+                    <div class="item-font">:</div>
+                    <div class="desc-content item-font">
+                        <%= party.companyName %>
+                    </div>
+                </div>
+                <div class="desc-item">
+                    <div class="desc-title item-font">
+                        <span>Address</span>
+                    </div>
+                    <div class="item-font">:</div>
+                    <div class="desc-content item-font">
+                        <%= party.address %>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+</body>
+</html>
